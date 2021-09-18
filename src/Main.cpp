@@ -78,8 +78,8 @@ int main()
 	glViewport(0, 0, width, height);
 
 	// Generates Shader objects
-	Shader shaderProgram("res/shaders/default.vert", "res/shaders/default.frag");
-	Shader skyboxShader("res/shaders/skybox.vert", "res/shaders/skybox.frag");
+	Shader shaderProgram("res/default.vert", "res/default.frag");
+	Shader skyboxShader("res/skybox.vert", "res/skybox.frag");
 
 	// Take care of all the light related things
 	glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
@@ -115,7 +115,7 @@ int main()
 	std::string modelPath = "res/models/airplane/scene.gltf";
 	
 	// Load in models
-	Model model((parentDir + modelPath).c_str());
+	Model model((modelPath).c_str());
 
 	// Variables to create periodic event for FPS displaying
 	double prevTime = 0.0;
@@ -148,12 +148,12 @@ int main()
 	// All the faces of the cubemap (make sure they are in this exact order)
 	std::string facesCubemap[6] =
 	{
-		parentDir + "res/right.jpg",
-		parentDir + "res/skybox/left.jpg",
-		parentDir + "res/skybox/top.jpg",
-		parentDir + "res/skybox/bottom.jpg",
-		parentDir + "res/skybox/front.jpg",
-		parentDir + "res/skybox/back.jpg"
+		"res/skybox/right.jpg",
+		"res/skybox/left.jpg",
+		"res/skybox/top.jpg",
+		"res/skybox/bottom.jpg",
+		"res/skybox/front.jpg",
+		"res/skybox/back.jpg"
 	};
 
 	// Creates the cubemap texture object
