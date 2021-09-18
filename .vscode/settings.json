@@ -1,0 +1,11 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "ios": "cpp",
+        "cerrno": "cpp",
+        "sstream": "cpp",
+        "memory": "cpp",
+        "utility": "cpp",
+        "array": "cpp"
+    }
+}
